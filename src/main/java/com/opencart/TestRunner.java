@@ -66,8 +66,6 @@ public class TestRunner {
         continueButton.click();
 
 
-        Thread.sleep(2000);
-
         System.out.println(driver.getTitle());
         driver.close();
         driver.quit();
