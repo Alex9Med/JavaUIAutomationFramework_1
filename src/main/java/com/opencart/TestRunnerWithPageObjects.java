@@ -29,11 +29,12 @@ public class TestRunnerWithPageObjects {
 
         AccountCreatedPage accountCreatedPage = new AccountCreatedPage(driver);
         accountCreatedPage.clickContinueButton();
+        System.out.println("Account is successful created!");
 
         accountCreatedPage.navigateToLogoutFromHeader();
-
         AccountLogoutPage accountLogoutPage = new AccountLogoutPage(driver);
         accountLogoutPage.clickContinueBtn();
+        System.out.println("The logout was successful.");
 
         homePage.navigateToLoginFromHeader();
         LoginPage loginPage = new LoginPage(driver);
@@ -45,6 +46,7 @@ public class TestRunnerWithPageObjects {
         MyAccountPage myAccountPage = new MyAccountPage(driver);
         myAccountPage.navigateToLogoutFromHeader();
         myAccountPage.clickLogoutBtn();
+        System.out.println("The logout was successful.");
         DriverManager.getInstance().tearDown();
         System.out.println("The execution is over !");
 
